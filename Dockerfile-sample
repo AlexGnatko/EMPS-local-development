@@ -1,0 +1,7 @@
+FROM php:8.1-fpm
+RUN apt -y update
+RUN apt -y upgrade
+RUN apt --fix-missing -y install libonig-dev libcurl4-openssl-dev curl zlib1g-dev libpng-dev libjpeg-dev libwebp-dev libzip-dev zip
+RUN docker-php-ext-configure gd --with-webp --with-jpeg && docker-php-ext-install gd
+RUN docker-php-ext-install mysqli mbstring curl exif zip bcmath
+RUN docker-php-ext-enable mysqli mbstring curl exif zip bcmath
