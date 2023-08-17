@@ -59,7 +59,7 @@ as the `/srv/www` folder in the container is mapped to the real `//d/w` folder.
 The `Dockerfile-sample` should be copied to `Dockerfile` in order to be able to install
 `php` with all the necessary dependencies. You can also edit your local version of `Dockerfile`
 to add other modules and apps you need for your projects. This file is excluded from the repo
-so that you don't accidentaly rewrite your local version with updates.``
+so that you don't accidentaly rewrite your local version with updates.
 
 ## Configure your local development websites
 
